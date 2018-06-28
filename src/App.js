@@ -28,10 +28,7 @@ class App extends Component {
     const filtered_robots = this.state.robots.filter(robots => {
       return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
     })
-    console.log(filtered_robots);
-    if (this.state.robots.length === 0) {
-      return <h1 className='tc'>LOADING......</h1>
-    } else {
+    
     return (
       <div className='tc'>
         <h1 className="f1">Robot Friends</h1>
@@ -41,7 +38,7 @@ class App extends Component {
         </Scroll>
       </div>
       )
-    }
+    
   }
   
   
