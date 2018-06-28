@@ -3,6 +3,7 @@ import CardList from "./CardList";
 import SearchBox from "./SearchBox";
 import "./App.css"
 import Scroll from "./Scroll"
+import { robots } from "./Robot"
 
 class App extends Component {
   constructor() {
@@ -14,9 +15,12 @@ class App extends Component {
   }
 
   componentDidMount() {
+    /*
     fetch('http://jsonplaceholder.typicode.com/users')
     .then(response=> response.json())
     .then(users=> {this.setState({robots: users})});
+    */
+    this.setState({robots: robots});
   }
 
   onSearchChange = (event) => {
